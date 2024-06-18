@@ -2,11 +2,12 @@ cmake_minimum_required(VERSION 3.5)
 project(phase_manager LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 
-find_package(Eigen3 3.3 REQUIRED)
+find_package(Eigen3 REQUIRED)
 find_package(catkin REQUIRED COMPONENTS
              roscpp
              message_generation
              )
+
 
 include_directories(
     include/
@@ -14,9 +15,14 @@ include_directories(
     ${EIGEN3_INCLUDE_DIR}
     ${catkin_INCLUDE_DIRS}
 )
+message("---- EIGEN3_INCLUDE_DIR ----: ${EIGEN3_INCLUDE_DIR}")
+
+
+
 set(LIBRARY_TARGET_NAME phase_manager) 
 set(phase_manager_SRC
     src/timeline.cpp
+    src/phase.cpp
     )
 add_library(${LIBRARY_TARGET_NAME} SHARED
 ${phase_manager_SRC}
@@ -31,7 +37,7 @@ target_include_directories(${LIBRARY_TARGET_NAME}
 
 
 add_executable(run_test tests/main.cpp)
-target_link_libraries(run_test PUBLIC ${LIBRARY_TARGET_NAME})
+target_link_libraries(run_test PUBLIC ${LIBRARY_TARGET_NAME} ${EIGEN3_INCLUDE_DIR})
 
 
 

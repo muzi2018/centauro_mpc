@@ -13,10 +13,19 @@ class Timeline{
         typedef std::shared_ptr<Timeline> Ptr;
         Timeline(int n_nodes, std::string name="", bool debug=false);
 
+        std::string getName();
+        int getEmptyNodes();
+
+        bool shift();
+        bool clear();
+        ~Timeline();
+
     private:
         std::string _name;
         int _n_nodes;
         bool _debug;
+
+        bool _reset();
 };
 
 

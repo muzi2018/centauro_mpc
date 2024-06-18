@@ -6,19 +6,3 @@
 
 #IncludeRegexTransform: 
 
-../include/phase_manager/timeline.h
-vector
--
-memory
--
-map
--
-unordered_map
--
-set
--
-
-/home/wang/centauro_mpc/src/timeline.cpp
-phase_manager/timeline.h
--
-

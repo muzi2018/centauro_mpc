@@ -505,6 +505,33 @@ gtest/fast:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+src/phase.o: src/phase.cpp.o
+
+.PHONY : src/phase.o
+
+# target to build an object file
+src/phase.cpp.o:
+	$(MAKE) -f CMakeFiles/phase_manager.dir/build.make CMakeFiles/phase_manager.dir/src/phase.cpp.o
+.PHONY : src/phase.cpp.o
+
+src/phase.i: src/phase.cpp.i
+
+.PHONY : src/phase.i
+
+# target to preprocess a source file
+src/phase.cpp.i:
+	$(MAKE) -f CMakeFiles/phase_manager.dir/build.make CMakeFiles/phase_manager.dir/src/phase.cpp.i
+.PHONY : src/phase.cpp.i
+
+src/phase.s: src/phase.cpp.s
+
+.PHONY : src/phase.s
+
+# target to generate assembly for a file
+src/phase.cpp.s:
+	$(MAKE) -f CMakeFiles/phase_manager.dir/build.make CMakeFiles/phase_manager.dir/src/phase.cpp.s
+.PHONY : src/phase.cpp.s
+
 src/timeline.o: src/timeline.cpp.o
 
 .PHONY : src/timeline.o
@@ -598,6 +625,9 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... src/phase.o"
+	@echo "... src/phase.i"
+	@echo "... src/phase.s"
 	@echo "... src/timeline.o"
 	@echo "... src/timeline.i"
 	@echo "... src/timeline.s"

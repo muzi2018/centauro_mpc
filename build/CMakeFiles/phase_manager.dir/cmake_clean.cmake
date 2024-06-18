@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/phase_manager.dir/src/phase.cpp.o"
   "CMakeFiles/phase_manager.dir/src/timeline.cpp.o"
   "libphase_manager.pdb"
   "libphase_manager.so"
