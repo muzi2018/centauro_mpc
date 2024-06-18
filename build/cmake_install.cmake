@@ -154,6 +154,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/wang/centauro_mpc/build/gtest/cmake_install.cmake")
+  include("/home/wang/centauro_mpc/build/bindings/python/cmake_install.cmake")
 
 endif()
 

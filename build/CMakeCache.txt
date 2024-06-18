@@ -395,11 +395,14 @@ NOSETESTS:FILEPATH=/usr/bin/nosetests3
 //Path to a program.
 P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
 
+//Python version to use for compiling modules
+PYBIND11_PYTHON_VERSION:STRING=3
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 
-//Specify specific Python version to use ('major.minor' or 'major')
-PYTHON_VERSION:STRING=3
+//Path to a library.
+PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.8.so
 
 //Location of Python module em
 PY_EM:STRING=/usr/lib/python3/dist-packages/em.py
@@ -530,6 +533,9 @@ phase_manager_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libroscpp.so;genera
 
 //Value Computed by CMake
 phase_manager_SOURCE_DIR:STATIC=/home/wang/centauro_mpc
+
+//The directory containing a CMake configuration file for pybind11.
+pybind11_DIR:PATH=/home/wang/forest_ws/install/share/cmake/pybind11
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
@@ -705,7 +711,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -762,6 +768,8 @@ CVSCOMMAND-ADVANCED:INTERNAL=1
 CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding PYTHON
+FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=/usr/bin/python33.8.10
 //Details about finding PY_em
 FIND_PACKAGE_MESSAGE_DETAILS_PY_em:INTERNAL=[/usr/lib/python3/dist-packages/em.py][v()]
 //Details about finding PythonInterp
@@ -798,6 +806,8 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//Test HAS_FLTO
+HAS_FLTO:INTERNAL=1
 //ADVANCED property for variable: HGCOMMAND
 HGCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
@@ -810,10 +820,21 @@ MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 P4COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
+PYTHON_INCLUDE_DIRS:INTERNAL=/usr/include/python3.8
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python3/dist-packages
+PYTHON_IS_DEBUG:INTERNAL=0
+PYTHON_LIBRARIES:INTERNAL=/usr/lib/x86_64-linux-gnu/libpython3.8.so
+//ADVANCED property for variable: PYTHON_LIBRARY
+PYTHON_LIBRARY-ADVANCED:INTERNAL=1
+PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-38-x86_64-linux-gnu.so
+PYTHON_MODULE_PREFIX:INTERNAL=
+PYTHON_VERSION:INTERNAL=3.8.10
+PYTHON_VERSION_MAJOR:INTERNAL=3
+PYTHON_VERSION_MINOR:INTERNAL=8
+Python_ADDITIONAL_VERSIONS:INTERNAL=3.11;3.10;3.9;3.8;3.7;3.6;3.5;3.4
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SLURM_SBATCH_COMMAND
@@ -824,6 +845,7 @@ SLURM_SRUN_COMMAND-ADVANCED:INTERNAL=1
 SVNCOMMAND-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+_Python:INTERNAL=PYTHON
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_samples
@@ -836,4 +858,6 @@ gtest_disable_pthreads-ADVANCED:INTERNAL=1
 gtest_force_shared_crt-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_hide_internal_symbols
 gtest_hide_internal_symbols-ADVANCED:INTERNAL=1
+//Directories where pybind11 and possibly Python headers are located
+pybind11_INCLUDE_DIRS:INTERNAL=/home/wang/forest_ws/install/include;/usr/include/python3.8
 

@@ -52,3 +52,10 @@
 /home/wang/centauro_mpc/build/gtest/googletest/CMakeFiles/test.dir
 /home/wang/centauro_mpc/build/gtest/googletest/CMakeFiles/gtest_main.dir
 /home/wang/centauro_mpc/build/gtest/googletest/CMakeFiles/gtest.dir
+/home/wang/centauro_mpc/build/bindings/python/CMakeFiles/install/strip.dir
+/home/wang/centauro_mpc/build/bindings/python/CMakeFiles/install/local.dir
+/home/wang/centauro_mpc/build/bindings/python/CMakeFiles/install.dir
+/home/wang/centauro_mpc/build/bindings/python/CMakeFiles/list_install_components.dir
+/home/wang/centauro_mpc/build/bindings/python/CMakeFiles/rebuild_cache.dir
+/home/wang/centauro_mpc/build/bindings/python/CMakeFiles/edit_cache.dir
+/home/wang/centauro_mpc/build/bindings/python/CMakeFiles/test.dir
