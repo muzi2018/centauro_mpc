@@ -15,14 +15,13 @@ include_directories(
     ${EIGEN3_INCLUDE_DIR}
     ${catkin_INCLUDE_DIRS}
 )
-message("---- EIGEN3_INCLUDE_DIR ----: ${EIGEN3_INCLUDE_DIR}")
-
 
 
 set(LIBRARY_TARGET_NAME phase_manager) 
 set(phase_manager_SRC
     src/timeline.cpp
     src/phase.cpp
+    src/phase_manager.cpp
     )
 add_library(${LIBRARY_TARGET_NAME} SHARED
 ${phase_manager_SRC}

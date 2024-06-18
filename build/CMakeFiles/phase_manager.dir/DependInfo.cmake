@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/wang/centauro_mpc/src/phase.cpp" "/home/wang/centauro_mpc/build/CMakeFiles/phase_manager.dir/src/phase.cpp.o"
+  "/home/wang/centauro_mpc/src/phase_manager.cpp" "/home/wang/centauro_mpc/build/CMakeFiles/phase_manager.dir/src/phase_manager.cpp.o"
   "/home/wang/centauro_mpc/src/timeline.cpp" "/home/wang/centauro_mpc/build/CMakeFiles/phase_manager.dir/src/timeline.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -3,6 +3,7 @@
 
 CMakeFiles/run_test.dir/tests/main.cpp.o
  ../include/phase_manager/phase.h
+ ../include/phase_manager/phase_manager.h
  ../include/phase_manager/timeline.h
  /home/wang/centauro_mpc/tests/main.cpp
  /usr/local/include/eigen3/Eigen/Cholesky

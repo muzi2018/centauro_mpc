@@ -22,6 +22,24 @@ stdexcept
 unordered_set
 -
 
+../include/phase_manager/phase_manager.h
+Eigen/Dense
+-
+numeric
+-
+vector
+-
+iostream
+-
+memory
+-
+stdexcept
+-
+unordered_set
+-
+unordered_map
+-
+
 ../include/phase_manager/timeline.h
 vector
 -
@@ -38,6 +56,8 @@ set
 phase_manager/timeline.h
 -
 phase_manager/phase.h
+-
+phase_manager/phase_manager.h
 -
 iostream
 -

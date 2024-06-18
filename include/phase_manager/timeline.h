@@ -7,11 +7,11 @@
 #include <unordered_map>
 #include <set>
 
-
+class PhaseManager;
 class Timeline{
     public:
         typedef std::shared_ptr<Timeline> Ptr;
-        Timeline(int n_nodes, std::string name="", bool debug=false);
+        Timeline(PhaseManager& phase_manager, int n_nodes, std::string name="", bool debug=false);
 
         std::string getName();
         int getEmptyNodes();

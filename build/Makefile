@@ -532,6 +532,33 @@ src/phase.cpp.s:
 	$(MAKE) -f CMakeFiles/phase_manager.dir/build.make CMakeFiles/phase_manager.dir/src/phase.cpp.s
 .PHONY : src/phase.cpp.s
 
+src/phase_manager.o: src/phase_manager.cpp.o
+
+.PHONY : src/phase_manager.o
+
+# target to build an object file
+src/phase_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/phase_manager.dir/build.make CMakeFiles/phase_manager.dir/src/phase_manager.cpp.o
+.PHONY : src/phase_manager.cpp.o
+
+src/phase_manager.i: src/phase_manager.cpp.i
+
+.PHONY : src/phase_manager.i
+
+# target to preprocess a source file
+src/phase_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/phase_manager.dir/build.make CMakeFiles/phase_manager.dir/src/phase_manager.cpp.i
+.PHONY : src/phase_manager.cpp.i
+
+src/phase_manager.s: src/phase_manager.cpp.s
+
+.PHONY : src/phase_manager.s
+
+# target to generate assembly for a file
+src/phase_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/phase_manager.dir/build.make CMakeFiles/phase_manager.dir/src/phase_manager.cpp.s
+.PHONY : src/phase_manager.cpp.s
+
 src/timeline.o: src/timeline.cpp.o
 
 .PHONY : src/timeline.o
@@ -628,6 +655,9 @@ help:
 	@echo "... src/phase.o"
 	@echo "... src/phase.i"
 	@echo "... src/phase.s"
+	@echo "... src/phase_manager.o"
+	@echo "... src/phase_manager.i"
+	@echo "... src/phase_manager.s"
 	@echo "... src/timeline.o"
 	@echo "... src/timeline.i"
 	@echo "... src/timeline.s"
